@@ -1,33 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    int playerClass; //changed by class
-    int win;
-    int Win
+    private int playerClass; //changed by class
+    private int winAmount;
+    private int Win
     {
         set
         {
             if (value == 3)
             {
-                win = 2000;
+                winAmount = 2000;
             }
             else if (value == 4)
             {
-                win = 3000;
+                winAmount = 3000;
             }
             else 
             {
-                win = 1000;
+                winAmount = 1000;
             }
         }
         get
         {
-            return win;
+            return winAmount;
         }
     } //ditto
+
+    private int gold = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -45,5 +48,20 @@ public class Player : MonoBehaviour
     {
         playerClass = tempClass;
         Win = tempClass;
+    }
+
+    public string Move()
+    {
+        return "#000000";
+    }
+
+    public int GetGold()
+    {
+        return gold;
+    }
+
+    public int GetWinAmount()
+    {
+        return winAmount;
     }
 }
