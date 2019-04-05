@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
     public string Move()
     {
-        return "#000000";
+        return "#000000"; //returns whatever the color detector finds. Probably will reference a Move class, which wll reference ColorDetector.
     }
 
     public int GetGold()
