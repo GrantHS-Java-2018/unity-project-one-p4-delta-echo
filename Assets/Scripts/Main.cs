@@ -23,13 +23,13 @@ public class Main : MonoBehaviour
 
     private void AddPlayers()
     {
-        for (int i = 0; i < 4; i ++)
+        for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
-            Console.WriteLine("1: Elf: can't fight as well, good at finding secret doors, needs 1000 gp to win");
-            Console.WriteLine("2: Hero: Can fight, needs 1000 gp to win");
-            Console.WriteLine("3: Superhero: Can fight much better, needs 2000 gp to win");
-            Console.WriteLine("4: Wizard: Has powerful spells, needs 3000 gp to win");
+            Console.WriteLine("1: Elf: can't fight as well, good at finding secret doors, needs 10000 gp to win");
+            Console.WriteLine("2: Hero: Can fight, needs 10000 gp to win");
+            Console.WriteLine("3: Superhero: Can fight much better, needs 20000 gp to win");
+            Console.WriteLine("4: Wizard: Has powerful spells, needs 30000 gp to win");
             if (i >= 2)
             {
                 Console.WriteLine("0: no new players");
