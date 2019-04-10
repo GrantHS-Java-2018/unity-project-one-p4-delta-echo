@@ -23,7 +23,7 @@ public class Main : MonoBehaviour
 
     private void AddPlayers()
     {
-        for (int i = 0; i < 5; i ++)
+        for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
             Console.WriteLine("1: Elf: can't fight as well, good at finding secret doors, needs 10000 gp to win");
@@ -47,14 +47,14 @@ public class Main : MonoBehaviour
             for (int i = 0; i < 4 /*player count*/; i++)
             {
                 
-                string detectedColor = players[i].Move();
+                string detectedColor = players[i].GetComponent<Player>().Move();
                 if (detectedColor.Equals("#idunno"))
                 {
                     //get monster, fight it
                     //if win, treasure
                 }
 
-                if (Players[i].GetGold() >= Players[i].GetWinAmount())
+                if (players[i].GetComponent<Player>().GetGold() >= players[i].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
                     win = true;
