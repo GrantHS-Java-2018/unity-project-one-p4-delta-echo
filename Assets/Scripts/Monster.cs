@@ -18,5 +18,5 @@ public abstract class Monster : MonoBehaviour
         
     }
 
-    protected abstract bool Fight(int roll, int character);
+    public abstract bool Fight(int roll, int character);
 }
