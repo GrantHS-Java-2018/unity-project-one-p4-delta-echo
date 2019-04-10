@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    List<Player> players = new List<Player>();
-    
+
+    public GameObject playerPrefab;
+    public List<GameObject> players;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,8 @@ public class Main : MonoBehaviour
             {
                 Console.WriteLine("0: no new players");
             }
-            players.Add(new Player());
-            players[i].SetClass(1);
+
+            players.Add(Instantiate(playerPrefab, this.transform));
         }
     }
 
@@ -43,8 +44,9 @@ public class Main : MonoBehaviour
         bool win = false;
         while (!win)
         {
-            for (int i = 0; i < players.Count; i++)
+            for (int i = 0; i < 4 /*player count*/; i++)
             {
+                
                 string detectedColor = players[i].Move();
                 if (detectedColor.Equals("#idunno"))
                 {
@@ -52,11 +54,12 @@ public class Main : MonoBehaviour
                     //if win, treasure
                 }
 
-                if (players[i].GetGold() >= players[i].GetWinAmount())
+                if (Players[i].GetGold() >= Players[i].GetWinAmount())
                 {
                     //win stuff
                     win = true;
                 }
+                
             }
         }
     }

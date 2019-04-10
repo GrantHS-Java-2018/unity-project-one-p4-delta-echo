@@ -6,8 +6,6 @@ using Random = UnityEngine.Random;
 
 public class Die : MonoBehaviour
 {
-    public GameObject 
-    
     // Start is called before the first frame update
     void Start()
     {
