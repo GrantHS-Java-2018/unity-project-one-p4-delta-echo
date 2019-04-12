@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Monster : MonoBehaviour
+public class Movement : MonoBehaviour
 {
-    protected GameObject die;
-    
-    int[] dc = new int[6]; //all monster cards inherit from this
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +16,8 @@ public abstract class Monster : MonoBehaviour
         
     }
 
-    protected abstract bool Fight(int roll, int character);
+    public string Move()
+    {
+        return "#idunno";
+    }
 }

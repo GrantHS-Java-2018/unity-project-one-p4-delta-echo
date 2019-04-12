@@ -5,23 +5,28 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject diePrefab;
+    public GameObject movementPrefab;
+    GameObject die;
+    GameObject movement;
+    
     private int playerClass; //changed by class
     private int winAmount;
-    private int Win
+    private int WinAmount
     {
         set
         {
             if (value == 3)
             {
-                winAmount = 2000;
+                winAmount = 20000;
             }
             else if (value == 4)
             {
-                winAmount = 3000;
+                winAmount = 30000;
             }
             else 
             {
-                winAmount = 1000;
+                winAmount = 10000;
             }
         }
         get
@@ -35,7 +40,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        die = Instantiate(diePrefab, this.transform);
+        movement = Instantiate(movementPrefab, this.transform);
     }
 
     // Update is called once per frame
@@ -47,11 +53,12 @@ public class Player : MonoBehaviour
     public void SetClass(int tempClass)
     {
         playerClass = tempClass;
-        Win = tempClass;
+        WinAmount = tempClass;
     }
 
     public string Move()
     {
+        movement.GetComponent<Movement>().Move;
         return "#000000"; //returns whatever the color detector finds. Probably will reference a Move class, which wll reference ColorDetector.
     }
 
