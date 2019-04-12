@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
 
     public string Move()
     {
-        movement.GetComponent<Movement>().Move;
+        string detectedColor = movement.GetComponent<Movement>().Move();
         return "#000000"; //returns whatever the color detector finds. Probably will reference a Move class, which wll reference ColorDetector.
     }
 
