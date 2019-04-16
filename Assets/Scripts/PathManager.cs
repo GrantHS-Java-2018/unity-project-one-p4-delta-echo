@@ -29,18 +29,81 @@ public class PathManager : MonoBehaviour
         openList.Add(0, currentNode);
         currentNode.Previous = null;
         currentNode.Distance = 0f;
-        
-        
+
+        while (openList.Count > 0)
+        {
+            //Examines start node, adds neighbors, picks node most likely to be on right path based on distance
+            currentNode = openList.Values[0];
+            openList.RemoveAt(0);
+            var distance = currentNode.Distance;
+            closedList.Add(currentNode);
+            if (currentNode == endNode)
+            {
+                break;
+            }
+
+            foreach (var neighbor in currentNode.neighbors)
+            {
+                if (closedList.Contains(neighbor) || openList.ContainsValue( neighbor))
+                {
+                    continue;
+                }
+
+                neighbor.Previous = currentNode;
+                neighbor.Distance = distance + (neighbor.transform.position - currentNode.transform.position).magnitude;
+                var distanceToTarget = (neighbor.transform.position - endNode.transform.position).magnitude;
+                openList.Add(neighbor.Distance + distanceToTarget, neighbor);
+            }
+        }
+
+        if (currentNode == endNode)
+        {
+            while (currentNode.Previous != null)
+            {
+                currentPath.Push(currentNode.transform.position);
+                currentNode = currentNode.Previous;
+            }
+            currentPath.Push(transform.position);
+        }
     }
 
     public void Stop()
     {
-        //stuff
+        currentPath = null;
+        moveTimeTotal = 0;
+        moveTimeCurrent = 0;
     }
 
+    //This update function is for patrolling things that update every frame. We don't strictly need it, but I'm including it so we can reference it and use it to control our movement.
     void Update()
     {
-        //stuff
+        if (currentPath != null && currentPath.Count > 0)
+        {
+            if (moveTimeCurrent < moveTimeTotal)
+            {
+                moveTimeCurrent += Time.deltaTime;
+                if (moveTimeCurrent > moveTimeTotal)
+                {
+                    moveTimeCurrent = moveTimeTotal;
+                }
+
+                transform.position = Vector3.Lerp(currentWaypointPosition, currentPath.Peek(),
+                    moveTimeCurrent / moveTimeTotal);
+            }
+            else
+            {
+                currentWaypointPosition = currentPath.Pop();
+                if (currentPath.Count == 0)
+                {
+                    Stop();
+                }
+                else
+                {
+                    moveTimeCurrent = 0;
+                    moveTimeTotal = (currentWaypointPosition - currentPath.Peek()).magnitude / walkSpeed;
+                }
+            }
+        }
     }
 
     //searches for closest waypoint, if nearest is less than the last closest, set it as the new closest, return result.
