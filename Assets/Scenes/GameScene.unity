@@ -317,6 +317,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armory
       objectReference: {fileID: 0}
+    - target: {fileID: 621118022222451972, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4524009747897432307, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,7 +1379,7 @@ PrefabInstance:
     - target: {fileID: 9207070530750615641, guid: f6b1fedf2932c064c85c438bde736bff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9207070530750615641, guid: f6b1fedf2932c064c85c438bde736bff,
         type: 3}
