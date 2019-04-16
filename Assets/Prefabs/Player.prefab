@@ -43,6 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c32c2817a90004baa74d53adc1b4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 8657154254309601886, guid: 7a8414a815b331e468faf361783cad49, type: 3}
-  movement: {fileID: 6984773823136399563, guid: bcdd63cdafc925c42a7d9ccf630362db,
+  diePrefab: {fileID: 8657154254309601886, guid: 7a8414a815b331e468faf361783cad49,
+    type: 3}
+  movementPrefab: {fileID: 6984773823136399563, guid: bcdd63cdafc925c42a7d9ccf630362db,
+    type: 3}
+  playerSprite: {fileID: 7029128804159101553, guid: f6b1fedf2932c064c85c438bde736bff,
     type: 3}
