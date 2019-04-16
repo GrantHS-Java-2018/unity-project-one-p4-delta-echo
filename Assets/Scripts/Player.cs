@@ -7,8 +7,11 @@ public class Player : MonoBehaviour
 {
     public GameObject diePrefab;
     public GameObject movementPrefab;
+    public GameObject playerSprite;
+    
     GameObject die;
     GameObject movement;
+    private GameObject sprite;
     
     private int playerClass; //changed by class
     private int winAmount;
