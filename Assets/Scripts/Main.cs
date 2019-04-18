@@ -26,13 +26,13 @@ public class Main : MonoBehaviour
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
-            Console.WriteLine("1: Elf: can't fight as well, good at finding secret doors, needs 10000 gp to win");
-            Console.WriteLine("2: Hero: Can fight, needs 10000 gp to win");
-            Console.WriteLine("3: Superhero: Can fight much better, needs 20000 gp to win");
-            Console.WriteLine("4: Wizard: Has powerful spells, needs 30000 gp to win");
+            Console.WriteLine("1: Elf: Not very strong, good at finding secret doors, needs 10000 gp to win");
+            Console.WriteLine("2: Hero: Can fight well, needs 10000 gp to win");
+            Console.WriteLine("3: Superhero: The best fighter, needs 20000 gp to win");
+            Console.WriteLine("4: Wizard: Has powerful spells, such as lightening bolt and fire ball, needs 30000 gp to win");
             if (i >= 2)
             {
-                Console.WriteLine("0: no new players");
+                Console.WriteLine("0: No new players");
             }
 
             players.Add(Instantiate(playerPrefab, this.transform));
