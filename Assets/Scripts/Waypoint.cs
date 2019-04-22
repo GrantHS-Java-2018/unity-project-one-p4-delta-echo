@@ -5,7 +5,9 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     public List<Waypoint> neighbors;
-
+    public GameObject monster;
+    public GameObject treasure;
+    
     public Waypoint Previous
     {
         get;
