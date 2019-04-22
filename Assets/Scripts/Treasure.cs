@@ -19,5 +19,4 @@ public abstract class Treasure : MonoBehaviour
         
     }
 
-    public abstract bool Fight(int roll, int character);
 }
