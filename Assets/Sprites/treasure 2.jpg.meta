@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 53bf32804305d0b498728779e9937ff2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6685917071843893986
+    second: treasure 2_0
+  - first:
+      213: 3642721885436127202
+    second: treasure 2_1
+  - first:
+      213: -7900312772843884628
+    second: treasure 2_2
+  - first:
+      213: -4659262118255690019
+    second: treasure 2_3
+  - first:
+      213: 8258582089635835507
+    second: treasure 2_4
+  - first:
+      213: -2571948718295530081
+    second: treasure 2_5
+  - first:
+      213: -7691849456185296657
+    second: treasure 2_6
+  - first:
+      213: -2185278799709701216
+    second: treasure 2_7
+  - first:
+      213: -9153890137567985353
+    second: treasure 2_8
+  - first:
+      213: -2768888872804895817
+    second: treasure 2_9
+  - first:
+      213: 6168952730890394894
+    second: treasure 2_10
+  - first:
+      213: -8680195805996712198
+    second: treasure 2_11
+  - first:
+      213: 6494814449408811704
+    second: treasure 2_12
+  - first:
+      213: -4100887006924900160
+    second: treasure 2_13
+  - first:
+      213: 523464251916943068
+    second: treasure 2_14
+  - first:
+      213: -3417080363960042759
+    second: treasure 2_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +88,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +117,356 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: treasure 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524080c164a59cc4d862a05e10b899c6
+      internalID: 6685917071843893986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 672.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac71c5d7c11760f4eaf84ae66b7b66e3
+      internalID: 3642721885436127202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_2
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 672.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6111f5b447c0f4b84410e85f723458
+      internalID: -7900312772843884628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_3
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 672.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b5bf5d807775e4aab8d5da7bf88693
+      internalID: -4659262118255690019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96507d68ffe868146928fadccb16b041
+      internalID: 8258582089635835507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 448.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e3917e84598144f80d032e79a5f823
+      internalID: -2571948718295530081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_6
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 448.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fab8d6a61af544f9c493e16d123af1
+      internalID: -7691849456185296657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_7
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 448.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d6e477076f9e5478d7da89238bee64
+      internalID: -2185278799709701216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f775ec2ffc7e77d418651509f4b3c3c4
+      internalID: -9153890137567985353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 224.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94facbadd2122304c90ca57b0dfd0245
+      internalID: -2768888872804895817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_10
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 224.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaaae5ee04ea5b4abd92ddef927a4cf
+      internalID: 6168952730890394894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_11
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 224.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5337d03f6cc32c4ead894a545c95962
+      internalID: -8680195805996712198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad3f1b6d812bb342bf69d9b9d16a813
+      internalID: 6494814449408811704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_13
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851cc2a59ce2d664fbcb45ecfb5692d5
+      internalID: -4100887006924900160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_14
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac145f054aaaa5c42a99813a18c992fc
+      internalID: 523464251916943068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: treasure 2_15
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0.75
+        width: 296.5
+        height: 224.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2b1bf3ccb1e8941bd7df1e1e2c0484
+      internalID: -3417080363960042759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
