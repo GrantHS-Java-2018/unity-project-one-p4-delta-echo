@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Treasure : MonoBehaviour
+public class Treasure : MonoBehaviour
 {
 
-    public int value;
+    public int value =50;
     
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public abstract class Treasure : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int a = 3;
     }
 
 }

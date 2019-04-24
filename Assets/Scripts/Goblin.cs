@@ -20,7 +20,7 @@ public class Goblin : Monster
         
     }
 
-    public bool Fight(int roll, int character)
+    public override bool Fight(int roll, int character)
     {
         return true;
     }
