@@ -30,4 +30,14 @@ public class Waypoint : MonoBehaviour
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
     }
+
+    public GameObject GetMonster()
+    {
+        GetMonster(return monster);
+    }
+    public GameObject GetTreasure()
+    {
+        GetMonster(return treasure);
+    }
+
 }

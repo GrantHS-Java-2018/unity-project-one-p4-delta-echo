@@ -29,4 +29,5 @@ public class Goblin : Monster
     {
         return roll >= dc[character];
     }
+    
 }
