@@ -7,11 +7,11 @@ public class Player : MonoBehaviour
 {
     public GameObject diePrefab;
     public GameObject movementPrefab;
-    public GameObject playerSprite;
+    public GameObject currentNodeAssignment;
     
     GameObject die;
     GameObject movement;
-    private GameObject sprite;
+    GameObject currentNode;
     
     private int playerClass; //changed by class
     private int winAmount;
@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
     {
         die = Instantiate(diePrefab, this.transform);
         movement = Instantiate(movementPrefab, this.transform);
+        currentNode = Instantiate(currentNodeAssignment, this.transform);
+
     }
 
     // Update is called once per frame
@@ -61,7 +63,7 @@ public class Player : MonoBehaviour
 
     public string Move()
     {
-        string detectedColor = movement.GetComponent<Movement>().Move();
+        currentNode = movement.GetComponent<Movement>().Move();
         return "#000000"; //returns whatever the color detector finds. Probably will reference a Move class, which wll reference ColorDetector.
     }
 
