@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
         
     }
 
-    public string Move()
+    public Waypoint Move()
     {
         return "#idunno";
     }
