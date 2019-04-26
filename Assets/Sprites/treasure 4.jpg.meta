@@ -135,12 +135,12 @@ TextureImporter:
       name: treasure 4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 672.75
-        width: 296.5
-        height: 224.25
+        x: 23
+        y: 673
+        width: 274
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,12 +156,12 @@ TextureImporter:
       name: treasure 4_1
       rect:
         serializedVersion: 2
-        x: 296
-        y: 672.75
-        width: 296.5
-        height: 224.25
+        x: 318
+        y: 665
+        width: 235
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: treasure 4_2
       rect:
         serializedVersion: 2
-        x: 592
-        y: 672.75
-        width: 296.5
-        height: 224.25
+        x: 609
+        y: 663
+        width: 257
+        height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,12 +198,12 @@ TextureImporter:
       name: treasure 4_3
       rect:
         serializedVersion: 2
-        x: 888
-        y: 672.75
-        width: 296.5
-        height: 224.25
+        x: 908
+        y: 661
+        width: 210
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: treasure 4_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448.75
-        width: 296.5
-        height: 224.25
+        x: 27
+        y: 449
+        width: 256
+        height: 196
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: treasure 4_5
       rect:
         serializedVersion: 2
-        x: 296
-        y: 448.75
-        width: 296.5
-        height: 224.25
+        x: 320
+        y: 442
+        width: 237
+        height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,12 +261,12 @@ TextureImporter:
       name: treasure 4_6
       rect:
         serializedVersion: 2
-        x: 592
-        y: 448.75
-        width: 296.5
-        height: 224.25
+        x: 611
+        y: 446
+        width: 232
+        height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,12 +282,12 @@ TextureImporter:
       name: treasure 4_7
       rect:
         serializedVersion: 2
-        x: 888
-        y: 448.75
-        width: 296.5
-        height: 224.25
+        x: 918
+        y: 443
+        width: 187
+        height: 193
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,12 +303,12 @@ TextureImporter:
       name: treasure 4_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224.75
-        width: 296.5
-        height: 224.25
+        x: 28
+        y: 239
+        width: 241
+        height: 186
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,12 +324,12 @@ TextureImporter:
       name: treasure 4_9
       rect:
         serializedVersion: 2
-        x: 296
-        y: 224.75
-        width: 296.5
-        height: 224.25
+        x: 308
+        y: 220
+        width: 268
+        height: 202
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,12 +345,12 @@ TextureImporter:
       name: treasure 4_10
       rect:
         serializedVersion: 2
-        x: 592
-        y: 224.75
-        width: 296.5
-        height: 224.25
+        x: 631
+        y: 234
+        width: 186
+        height: 182
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -366,12 +366,12 @@ TextureImporter:
       name: treasure 4_11
       rect:
         serializedVersion: 2
-        x: 888
-        y: 224.75
-        width: 296.5
-        height: 224.25
+        x: 915
+        y: 229
+        width: 167
+        height: 189
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -387,12 +387,12 @@ TextureImporter:
       name: treasure 4_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0.75
-        width: 296.5
-        height: 224.25
+        x: 42
+        y: 26
+        width: 222
+        height: 186
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -408,12 +408,12 @@ TextureImporter:
       name: treasure 4_13
       rect:
         serializedVersion: 2
-        x: 296
-        y: 0.75
-        width: 296.5
-        height: 224.25
+        x: 323
+        y: 27
+        width: 238
+        height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -429,12 +429,12 @@ TextureImporter:
       name: treasure 4_14
       rect:
         serializedVersion: 2
-        x: 592
-        y: 0.75
-        width: 296.5
-        height: 224.25
+        x: 624
+        y: 27
+        width: 202
+        height: 174
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,11 +451,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 888
-        y: 0.75
-        width: 296.5
-        height: 224.25
+        y: 22
+        width: 257
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
