@@ -20,14 +20,32 @@ public class Waypoint : MonoBehaviour
         set;
     }
 
+    public List<Waypoint> getNeighbors()
+    {
+        return neighbors;
+    }
+
     private void OnDrawGizmos()
     {
         if (neighbors == null)
+        {
             return;
+        }
+
         Gizmos.color = new Color(0f, 0f, 0f);
         foreach (var neighbor in neighbors)
         {
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
     }
+
+    public GameObject GetMonster()
+    {
+        return monster;
+    }
+    public GameObject GetTreasure()
+    {
+        return treasure;
+    }
+
 }
