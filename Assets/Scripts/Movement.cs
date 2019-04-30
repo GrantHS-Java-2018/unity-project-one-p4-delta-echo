@@ -18,6 +18,10 @@ public class Movement : MonoBehaviour
 
     public Waypoint DetectNode(Waypoint currentNode)
     {
+        foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //shows the adjacent waypoints
+        {
+            node.GetComponent<Renderer>().enabled = true;
+        }
         Waypoint clickedNode = null; //saves whatever was clicked
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors())
         {
@@ -26,7 +30,10 @@ public class Movement : MonoBehaviour
                 return clickedNode;
             }
         }
-
+        foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //hides the adjacent waypoints
+        {
+            node.GetComponent<Renderer>().enabled = false;
+        }
         return null;
     }
 }
