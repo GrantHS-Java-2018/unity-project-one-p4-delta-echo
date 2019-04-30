@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
 
     public Waypoint DetectNode(Waypoint currentNode)
     {
-        Waypoint clickedNode; //saves whatever was clicked
+        Waypoint clickedNode = null; //saves whatever was clicked
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors())
         {
             if (clickedNode.transform.position == node.transform.position)
