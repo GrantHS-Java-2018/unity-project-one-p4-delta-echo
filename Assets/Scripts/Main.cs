@@ -44,18 +44,30 @@ public class Main : MonoBehaviour
         bool win = false;
         while (!win)
         {
-            for (int i = 0; i < 4 /*player count*/; i++)
+            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer ++)
             {
+                Move(currentPlayer);
                 
-                players[i].GetComponent<Player>().Move();
-                
-                if (players[i].GetComponent<Player>().GetGold() >= players[i].GetComponent<Player>().GetWinAmount())
+                if (players[currentPlayer].GetComponent<Player>().GetGold() >= players[currentPlayer].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
                     win = true;
-                    Console.WriteLine("player "+i+" wins!");
+                    Console.WriteLine("player " + currentPlayer + " wins!");
                 }
                 
+            }
+        }
+    }
+
+    private void Move(int currentPlayer)
+    {
+        int moves = 5;
+        while (moves > 0)
+        {
+            var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
+            if (moveSuccessful)
+            {
+                moves--;
             }
         }
     }

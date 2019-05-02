@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
         
     }
 
-    public GameObject CheckForClick()
+    public Vector3 CheckForClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -25,11 +25,11 @@ public class Movement : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100))
             {
-                return hit.transform.gameObject;
+                return hit.transform.gameObject.transform.position;
             }
         }
 
-        return null;
+        return new Vector3(0, 0, 0);
     }
 
     public Waypoint DetectNode(Waypoint currentNode)
@@ -39,13 +39,13 @@ public class Movement : MonoBehaviour
             node.GetComponent<Renderer>().enabled = true;
         }
         
-        Waypoint clickedNode = null; //saves whatever was clicked
+        Vector3 clickedPosition = CheckForClick(); //saves whatever was clicked
         
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors())
         {
-            if (clickedNode.transform.position == node.transform.position)
+            if (clickedPosition == node.transform.position)
             {
-                return clickedNode;
+                return node;
             }
         }
         
