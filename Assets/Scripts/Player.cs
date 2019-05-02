@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
     private int playerClass; //changed by class
     private int winAmount;
     private int loseATurn;
+    private List<GameObject> treasures;
 
     private int WinAmount
     {
@@ -86,29 +89,37 @@ public class Player : MonoBehaviour
     public void Fight(GameObject monster)
     {
         var result = monster.GetComponent<Monster>().Fight(die.GetComponent<Die>().Roll(2), playerClass);
-        if (result)
+        if (!result)
         {
             int total = die.GetComponent<Die>().Roll(2);
             if (total >= 5)// miss
             {
             }else if (total >= 7)//stunned
             {
-                dropTreasure(1);
+                dropTreasure(0);
             }else if (total >=10)//wounded
             {
                 loseATurn += 1;
-                dropTreasure(2);
+                dropTreasure(1);
 
             }else if (total == 11)//seriously wounded
             {
+                dropTreasure(2);
+
             }else if (total == 12)//killed
             {
+                dropTreasure(3);
+                death();
             }
             else
             {print("error"+total);
             }
 
             //do stuff: 2-5 miss,6-7 stunned,8-10 wounded, 11 seriously wounded, 12
+        }else
+        {
+           //add treasure, do stuff
+           treasures.Add(currentNode.GetComponent<Waypoint>().GetTreasure());
         }
     }
 
@@ -124,7 +135,24 @@ public class Player : MonoBehaviour
 
     private void dropTreasure(int quantity)
     {
-        //quantity 0=stun, 1=wound, 2=serious
-        //do stuff
+        int length = treasures.Count;
+        if (quantity == 1)
+        {
+            treasures.RemoveAt(Random.Range(1,length));
+            
+        }else if (quantity == 2)
+        {
+            for (int i=0; i>(length/2);i++) {
+                treasures.RemoveAt(Random.Range(1,treasures.Count));
+            }
+        } else if (quantity == 3)
+        {
+                treasures.Clear();
+        }
+    }
+
+    private void death()
+    {
+        Start();
     }
 }
