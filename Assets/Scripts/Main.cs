@@ -39,6 +39,7 @@ public class Main : MonoBehaviour
         }
     }
 
+    //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
     {
         bool win = false;
@@ -59,6 +60,7 @@ public class Main : MonoBehaviour
         }
     }
 
+    //Loops repeatedly until current player moves successfully, then counts down, 5 successful moves allowed
     private void Move(int currentPlayer)
     {
         int moves = 5;
