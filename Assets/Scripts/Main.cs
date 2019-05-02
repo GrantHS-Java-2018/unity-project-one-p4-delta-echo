@@ -29,7 +29,7 @@ public class Main : MonoBehaviour
             Console.WriteLine("1: Elf: Not very strong, good at finding secret doors, needs 10000 gp to win");
             Console.WriteLine("2: Hero: Can fight well, needs 10000 gp to win");
             Console.WriteLine("3: Superhero: The best fighter, needs 20000 gp to win");
-            Console.WriteLine("4: Wizard: Has powerful spells, such as lightening bolt and fire ball, needs 30000 gp to win");
+            Console.WriteLine("4: Wizard: Has powerful spells, such as lightning bolt and fireball, needs 30000 gp to win");
             if (i >= 2)
             {
                 Console.WriteLine("0: No new players");
@@ -47,12 +47,8 @@ public class Main : MonoBehaviour
             for (int i = 0; i < 4 /*player count*/; i++)
             {
                 
-                string detectedColor = players[i].GetComponent<Player>().Move();
-                if (detectedColor.Equals("#idunno"))
-                {
-                    //get monster, fight it
-                    //if win, treasure
-                }
+                players[i].GetComponent<Player>().Move();
+                
 
                 if (players[i].GetComponent<Player>().GetGold() >= players[i].GetComponent<Player>().GetWinAmount())
                 {

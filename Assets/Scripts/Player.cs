@@ -60,16 +60,37 @@ public class Player : MonoBehaviour
         WinAmount = tempClass;
     }
 
-    public string Move()
+    public void Move()
     {
         Waypoint newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
         if (newNode != null)
         {
             this.transform.position = newNode.transform.position;
             currentNode = newNode;
+            OnEntry();
         }
+    }
 
-        return null;
+    public void OnEntry()
+    {
+        GameObject monster = currentNode.GetComponent<Waypoint>().GetMonster();
+        if (monster != null)
+        {
+            //do stuff
+            Fight(monster);
+        }
+    }
+
+    public void Fight(GameObject monster)
+    {
+        var result = monster.GetComponent<Monster>().Fight(die.GetComponent<Die>().Roll(2), playerClass);
+        if (result)
+        {
+            switch (die.GetComponent<Die>().Roll(2))
+            {
+                    //death rolls
+            }
+        }
     }
 
     public int GetGold()
