@@ -49,7 +49,6 @@ public class Main : MonoBehaviour
                 
                 players[i].GetComponent<Player>().Move();
                 
-
                 if (players[i].GetComponent<Player>().GetGold() >= players[i].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
