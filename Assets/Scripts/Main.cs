@@ -39,24 +39,37 @@ public class Main : MonoBehaviour
         }
     }
 
+    //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
     {
         bool win = false;
         while (!win)
         {
-            for (int i = 0; i < 4 /*player count*/; i++)
+            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer ++)
             {
+                Move(currentPlayer);
                 
-                players[i].GetComponent<Player>().Move();
-                
-
-                if (players[i].GetComponent<Player>().GetGold() >= players[i].GetComponent<Player>().GetWinAmount())
+                if (players[currentPlayer].GetComponent<Player>().GetGold() >= players[currentPlayer].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
                     win = true;
-                    Console.WriteLine("player "+i+" wins!");
+                    Console.WriteLine("player " + currentPlayer + " wins!");
                 }
                 
+            }
+        }
+    }
+
+    //Loops repeatedly until current player moves successfully, then counts down, 5 successful moves allowed
+    private void Move(int currentPlayer)
+    {
+        int moves = 5;
+        while (moves > 0)
+        {
+            var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
+            if (moveSuccessful)
+            {
+                moves--;
             }
         }
     }

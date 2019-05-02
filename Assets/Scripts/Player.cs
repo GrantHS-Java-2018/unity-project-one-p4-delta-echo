@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         WinAmount = tempClass;
     }
 
-    public void Move()
+    public bool Move()
     {
         Waypoint newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
         if (newNode != null)
@@ -73,7 +73,11 @@ public class Player : MonoBehaviour
             this.transform.position = newNode.transform.position;
             currentNode = newNode;
             OnEntry();
+
+            return true;
         }
+
+        return false;
     }
 
     public void OnEntry()

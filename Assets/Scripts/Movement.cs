@@ -16,24 +16,46 @@ public class Movement : MonoBehaviour
         
     }
 
+    //When called by DetectNde, checks if mouse is down, fires ray, and returns the point of the node hit.
+    public Vector3 CheckForClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                return hit.transform.gameObject.transform.position;
+            }
+        }
+
+        return new Vector3(0, 0, 0);
+    }
+
+    //Shows the waypoints, then checks for click. Compares clicked position with positions of adjacent nodes, returns clicked node if there's a match. Hides adjacent nodes.
     public Waypoint DetectNode(Waypoint currentNode)
     {
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //shows the adjacent waypoints
         {
             node.GetComponent<Renderer>().enabled = true;
         }
-        Waypoint clickedNode = null; //saves whatever was clicked
+        
+        Vector3 clickedPosition = CheckForClick(); //saves whatever was clicked
+        
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors())
         {
-            if (clickedNode.transform.position == node.transform.position)
+            if (clickedPosition == node.transform.position)
             {
-                return clickedNode;
+                return node;
             }
         }
+        
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //hides the adjacent waypoints
         {
             node.GetComponent<Renderer>().enabled = false;
         }
         return null;
     }
+    
 }
