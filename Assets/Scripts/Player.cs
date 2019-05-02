@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     
     private int playerClass; //changed by class
     private int winAmount;
+    private int loseATurn;
+
     private int WinAmount
     {
         set
@@ -86,10 +88,27 @@ public class Player : MonoBehaviour
         var result = monster.GetComponent<Monster>().Fight(die.GetComponent<Die>().Roll(2), playerClass);
         if (result)
         {
-            switch (die.GetComponent<Die>().Roll(2))
+            int total = die.GetComponent<Die>().Roll(2);
+            if (total >= 5)// miss
             {
-                    //death rolls
+            }else if (total >= 7)//stunned
+            {
+                dropTreasure(1);
+            }else if (total >=10)//wounded
+            {
+                loseATurn += 1;
+                dropTreasure(2);
+
+            }else if (total == 11)//seriously wounded
+            {
+            }else if (total == 12)//killed
+            {
             }
+            else
+            {print("error"+total);
+            }
+
+            //do stuff: 2-5 miss,6-7 stunned,8-10 wounded, 11 seriously wounded, 12
         }
     }
 
@@ -101,5 +120,11 @@ public class Player : MonoBehaviour
     public int GetWinAmount()
     {
         return winAmount;
+    }
+
+    private void dropTreasure(int quantity)
+    {
+        //quantity 0=stun, 1=wound, 2=serious
+        //do stuff
     }
 }
