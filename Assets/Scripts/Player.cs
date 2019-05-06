@@ -96,33 +96,31 @@ public class Player : MonoBehaviour
         if (!result)
         {
             int total = die.GetComponent<Die>().Roll(2);
-            if (total >= 5)// miss
+            if (total >= 5)//miss
             {
             }else if (total >= 7)//stunned
             {
-                dropTreasure(0);
+                DropTreasure(0);
             }else if (total >=10)//wounded
             {
                 loseATurn += 1;
-                dropTreasure(1);
+                DropTreasure(1);
 
             }else if (total == 11)//seriously wounded
             {
-                dropTreasure(2);
+                DropTreasure(2);
 
             }else if (total == 12)//killed
             {
-                dropTreasure(3);
-                death();
+                DropTreasure(3);
+                Death();
             }
-            else
+            else //problem solving
             {print("error"+total);
             }
 
-            //do stuff: 2-5 miss,6-7 stunned,8-10 wounded, 11 seriously wounded, 12
         }else
         {
-           //add treasure, do stuff
            treasures.Add(currentNode.GetComponent<Waypoint>().GetTreasure());
         }
     }
@@ -137,7 +135,7 @@ public class Player : MonoBehaviour
         return winAmount;
     }
 
-    private void dropTreasure(int quantity)
+    private void DropTreasure(int quantity)
     {
         int length = treasures.Count;
         if (quantity == 1)
@@ -155,8 +153,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void death()
+    private void Death()
     {
-        Start();
+        //do stuff
+        DropTreasure(3);
+        SetClass(Random.Range(1,4));
     }
 }
