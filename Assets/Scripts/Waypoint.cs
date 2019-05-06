@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public List<Waypoint> neighbors;
+    public List<GameObject> neighbors;
     public GameObject monster;
     public GameObject treasure;
     
+   
     public Waypoint Previous
     {
         get;
@@ -20,7 +21,7 @@ public class Waypoint : MonoBehaviour
         set;
     }
 
-    public List<Waypoint> getNeighbors()
+    public List<GameObject> getNeighbors()
     {
         return neighbors;
     }
@@ -47,5 +48,4 @@ public class Waypoint : MonoBehaviour
     {
         return treasure;
     }
-
 }

@@ -8,6 +8,7 @@ public class Main : MonoBehaviour
 
     public GameObject playerPrefab;
     public List<GameObject> players;
+
     // Start is called before the first frame update
     void Start()
     {
