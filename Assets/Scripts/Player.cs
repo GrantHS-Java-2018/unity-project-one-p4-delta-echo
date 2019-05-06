@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         get
         {
             return winAmount;
-        }
+        }                                
     } //ditto
 
     private int gold = 0;
