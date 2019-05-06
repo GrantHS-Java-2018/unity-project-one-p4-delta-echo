@@ -85,7 +85,6 @@ public class Player : MonoBehaviour
         GameObject monster = currentNode.GetComponent<Waypoint>().GetMonster();
         if (monster != null)
         {
-            //do stuff
             Fight(monster);
         }
     }
@@ -122,6 +121,7 @@ public class Player : MonoBehaviour
         }else
         {
            treasures.Add(currentNode.GetComponent<Waypoint>().GetTreasure());
+           monster = null;
         }
     }
 
