@@ -11,8 +11,9 @@ public class Player : MonoBehaviour
     public GameObject movementPrefab;
     public GameObject currentNodeAssignment;
     
-    GameObject die;
-    GameObject movement;
+    private GameObject die;
+    private GameObject movement;
+    private GameObject currentNode;
     
     GameObject currentNode;
     
@@ -54,12 +55,6 @@ public class Player : MonoBehaviour
         currentNode = Instantiate(currentNodeAssignment, this.transform);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void SetClass(int tempClass)
     {
         playerClass = tempClass;
@@ -115,7 +110,7 @@ public class Player : MonoBehaviour
                 DropTreasure(3);
                 Death();
             }
-            else //problem solving
+            else //error report
             {print("error"+total);
             }
 

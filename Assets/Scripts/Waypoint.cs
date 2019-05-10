@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public List<GameObject> neighbors;
-    public GameObject monster;
-    public GameObject treasure;
+    public List<GameObject> neighborPrefabs;
+    public GameObject monsterPrefab;
+    public GameObject treasurePrefab;
     
-   
+    private List<GameObject> neighbors;
+    private GameObject monster;
+    private GameObject treasure;
+
+    private void Start()
+    {
+        foreach (var neighbor in neighborPrefabs)
+        {
+            neighbors.Add(Instantiate(neighbor, this.transform));
+        }
+
+        monster = Instantiate(monsterPrefab, this.transform);
+        treasure = Instantiate(treasurePrefab, this.transform);
+    }
+
     public Waypoint Previous
     {
         get;
@@ -26,15 +40,16 @@ public class Waypoint : MonoBehaviour
         return neighbors;
     }
 
+    //Draws lines on map, only in edit mode
     private void OnDrawGizmos()
     {
-        if (neighbors == null)
+        if (neighborPrefabs == null)
         {
             return;
         }
 
         Gizmos.color = new Color(0f, 0f, 0f);
-        foreach (var neighbor in neighbors)
+        foreach (var neighbor in neighborPrefabs)
         {
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
