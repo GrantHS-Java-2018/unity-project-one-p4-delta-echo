@@ -9,11 +9,11 @@ public class Player : MonoBehaviour
 {
     public GameObject diePrefab;
     public GameObject movementPrefab;
-    public Waypoint currentNodeAssignment;
+    public GameObject currentNodeAssignment;
     
-    GameObject die;
-    GameObject movement;
-    Waypoint currentNode;
+    private GameObject die;
+    private GameObject movement;
+    private GameObject currentNode;
     
     private int playerClass; //changed by class
     private int winAmount;
@@ -53,12 +53,6 @@ public class Player : MonoBehaviour
         currentNode = Instantiate(currentNodeAssignment, this.transform);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void SetClass(int tempClass)
     {
         playerClass = tempClass;
@@ -67,7 +61,7 @@ public class Player : MonoBehaviour
 
     public bool Move()
     {
-        Waypoint newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
+        GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
         if (newNode != null)
         {
             this.transform.position = newNode.transform.position;

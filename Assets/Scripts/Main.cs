@@ -7,18 +7,13 @@ public class Main : MonoBehaviour
 {
 
     public GameObject playerPrefab;
-    public List<GameObject> players;
-    // Start is called before the first frame update
+    
+    private List<GameObject> players;
+    
     void Start()
     {
         AddPlayers();
         GameLoop();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void AddPlayers()

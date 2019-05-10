@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
     }
 
     //Shows the waypoints, then checks for click. Compares clicked position with positions of adjacent nodes, returns clicked node if there's a match. Hides adjacent nodes.
-    public Waypoint DetectNode(Waypoint currentNode)
+    public GameObject DetectNode(GameObject currentNode)
     {
         foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //shows the adjacent waypoints
         {
