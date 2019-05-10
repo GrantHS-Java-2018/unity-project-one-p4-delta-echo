@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
                 DropTreasure(3);
                 Death();
             }
-            else //problem solving
+            else //error report
             {print("error"+total);
             }
 
