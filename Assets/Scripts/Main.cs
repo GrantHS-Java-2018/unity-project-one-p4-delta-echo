@@ -59,6 +59,14 @@ public class Main : MonoBehaviour
     private void Move(int currentPlayer)
     {
         int moves = 5;
+        if (players[currentPlayer].GetComponent<Player>().GetClass() == 1)
+        {
+            moves++;
+        }
+        if (players[currentPlayer].GetComponent<Player>().GetGold()/players[currentPlayer].GetComponent<Player>().GetWinAmount() >= 0.25) //maybe ammend to just be player in last place
+        {
+            moves++;
+        }
         while (moves > 0)
         {
             var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
