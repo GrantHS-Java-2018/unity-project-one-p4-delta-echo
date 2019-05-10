@@ -61,6 +61,11 @@ public class Player : MonoBehaviour
         WinAmount = tempClass;
     }
 
+    public int GetClass()
+    {
+        return(playerClass);
+    }
+
     public bool Move()
     {
         GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
