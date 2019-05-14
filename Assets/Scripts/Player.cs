@@ -128,6 +128,10 @@ public class Player : MonoBehaviour
     {
         return winAmount;
     }
+    public int GetClass()
+    {
+        return playerClass;
+    }
 
     private void DropTreasure(int quantity)
     {

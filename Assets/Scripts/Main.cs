@@ -40,7 +40,7 @@ public class Main : MonoBehaviour
         bool win = false;
         while (!win)
         {
-            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer ++)
+            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer++)
             {
                 Move(currentPlayer);
                 
@@ -59,6 +59,17 @@ public class Main : MonoBehaviour
     private void Move(int currentPlayer)
     {
         int moves = 5;
+        if (players[currentPlayer].GetComponent<Player>().GetClass() == 1)
+        {
+            moves++;
+        }
+
+        double accelerant = -1.5;
+        //-1 would decelerate from full movement to no movement, while 0 would do the opposite
+        // this allows the game pace to change based on player wealth. This could be used either to up the stakes (greater numbers) or to balance the game(smaller numbers)
+        // I like the idea of using this feature to combat runaway power growth. I would like to potentially alter this to only range from +1~ -1 move
+        moves = (int)Math.Round(moves * (accelerant + players[currentPlayer].GetComponent<Player>().GetGold() /
+                   players[currentPlayer].GetComponent<Player>().GetWinAmount()));
         while (moves > 0)
         {
             var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
