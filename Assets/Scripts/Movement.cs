@@ -36,14 +36,14 @@ public class Movement : MonoBehaviour
     //Shows the waypoints, then checks for click. Compares clicked position with positions of adjacent nodes, returns clicked node if there's a match. Hides adjacent nodes.
     public GameObject DetectNode(GameObject currentNode)
     {
-        foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //shows the adjacent waypoints
+        foreach (var node in currentNode.GetComponent<Waypoint>().GetNeighbors()) //shows the adjacent waypoints
         {
             node.GetComponent<Renderer>().enabled = true;
         }
         
         Vector3 clickedPosition = CheckForClick(); //saves whatever was clicked
         
-        foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors())
+        foreach (var node in currentNode.GetComponent<Waypoint>().GetNeighbors())
         {
             if (clickedPosition == node.transform.position)
             {
@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour
             }
         }
         
-        foreach (var node in currentNode.GetComponent<Waypoint>().getNeighbors()) //hides the adjacent waypoints
+        foreach (var node in currentNode.GetComponent<Waypoint>().GetNeighbors()) //hides the adjacent waypoints
         {
             node.GetComponent<Renderer>().enabled = false;
         }

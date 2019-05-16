@@ -15,11 +15,11 @@ public class Player : MonoBehaviour
     private GameObject movement;
     private GameObject currentNode;
     
-    GameObject currentNode;
-    
     private int playerClass; //changed by class
-    private int winAmount;
     private int loseATurn;
+    private int gold = 0;
+    private int winAmount;
+    
     private List<GameObject> treasures;
 
     private int WinAmount
@@ -43,18 +43,16 @@ public class Player : MonoBehaviour
         {
             return winAmount;
         }                                
-    } //ditto
+    }
 
-    private int gold = 0;
-    
     // Start is called before the first frame update
-    void Start()
+        void Start()
     {
         die = Instantiate(diePrefab, this.transform);
         movement = Instantiate(movementPrefab, this.transform);
         currentNode = Instantiate(currentNodeAssignment, this.transform);
     }
-
+    
     public void SetClass(int tempClass)
     {
         playerClass = tempClass;

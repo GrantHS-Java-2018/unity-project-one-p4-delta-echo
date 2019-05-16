@@ -18,6 +18,7 @@ public class Main : MonoBehaviour
 
     private void AddPlayers()
     {
+        /* created an infinite loop, will fix later
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
@@ -32,7 +33,15 @@ public class Main : MonoBehaviour
 
             players.Add(Instantiate(playerPrefab, this.transform));
         }
+        */
+        
+        //Currently we just need three players, this is temporary
+        for (int i = 0; i < 3; i++)
+        {
+            players.Add(Instantiate(playerPrefab, this.transform));
+        }
     }
+    
 
     //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
@@ -59,14 +68,19 @@ public class Main : MonoBehaviour
     private void Move(int currentPlayer)
     {
         int moves = 5;
+        
+        //gives the elf an unfair advantage
         if (players[currentPlayer].GetComponent<Player>().GetClass() == 1)
         {
             moves++;
         }
+        
+        //appears to give the poorest player a fair advantage
         if (players[currentPlayer].GetComponent<Player>().GetGold()/players[currentPlayer].GetComponent<Player>().GetWinAmount() >= 0.25) //maybe ammend to just be player in last place
         {
             moves++;
         }
+        
         while (moves > 0)
         {
             var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
