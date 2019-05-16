@@ -20,5 +20,8 @@ public abstract class Monster : MonoBehaviour
         
     }
 
-    public abstract bool Fight(int roll, int character);
+    public bool Fight(int roll, int character)
+    {
+        return roll >= dc[character];
+    }
 }

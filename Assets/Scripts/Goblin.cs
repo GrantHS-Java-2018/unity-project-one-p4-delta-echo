@@ -25,9 +25,6 @@ public class Goblin : Monster
         
     }
 
-    public override bool Fight(int roll, int character)
-    {
-        return roll >= dc[character];
-    }
+
     
 }
