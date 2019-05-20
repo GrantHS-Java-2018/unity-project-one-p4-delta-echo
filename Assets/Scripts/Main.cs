@@ -8,7 +8,7 @@ public class Main : MonoBehaviour
 
     public GameObject playerPrefab;
     
-    private List<GameObject> players;
+    private List<GameObject> players = new List<GameObject>();
     
     void Start()
     {
