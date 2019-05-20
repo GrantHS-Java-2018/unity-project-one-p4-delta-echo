@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         {
             this.transform.position = newNode.transform.position;
             currentNode = newNode;
-            OnEntry();
+            //OnEntry();
 
             return true;
         }
@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
         return false;
     }
 
+    /*
     public void OnEntry()
     {
         GameObject monster = currentNode.GetComponent<Waypoint>().GetMonster();
@@ -126,6 +127,7 @@ public class Player : MonoBehaviour
            monster = null;
         }
     }
+    */
 
     public int GetGold()
     {
@@ -137,6 +139,7 @@ public class Player : MonoBehaviour
         return winAmount;
     }
 
+    /*
     private void DropTreasure(int quantity)
     {
         int length = treasures.Count;
@@ -161,4 +164,5 @@ public class Player : MonoBehaviour
         DropTreasure(3);
         SetClass(Random.Range(1,4));
     }
+    */
 }

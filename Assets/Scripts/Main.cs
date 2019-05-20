@@ -70,6 +70,7 @@ public class Main : MonoBehaviour
     {
         int moves = 5;
         
+        /*
         //gives the elf an unfair advantage
         if (players[currentPlayer].GetComponent<Player>().GetClass() == 1)
         {
@@ -81,10 +82,12 @@ public class Main : MonoBehaviour
         {
             moves++;
         }
+        */
         
         while (moves > 0)
         {
             var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
+            
             if (moveSuccessful)
             {
                 moves--;
