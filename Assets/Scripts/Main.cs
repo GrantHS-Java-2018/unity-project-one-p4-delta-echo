@@ -8,7 +8,7 @@ public class Main : MonoBehaviour
 
     public GameObject playerPrefab;
     
-    private List<GameObject> players = new List<GameObject>();
+    private List<GameObject> players;
     
     void Start()
     {
@@ -18,7 +18,6 @@ public class Main : MonoBehaviour
 
     private void AddPlayers()
     {
-        /* created an infinite loop, will fix later
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
@@ -33,15 +32,7 @@ public class Main : MonoBehaviour
 
             players.Add(Instantiate(playerPrefab, this.transform));
         }
-        */
-        
-        //Currently we just need three players, this is temporary
-        for (int i = 0; i < 3; i++)
-        {
-            players.Add(Instantiate(playerPrefab, this.transform));
-        }
     }
-    
 
     //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
@@ -49,18 +40,17 @@ public class Main : MonoBehaviour
         bool win = false;
         while (!win)
         {
-            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer ++)
+            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer++)
             {
                 Move(currentPlayer);
                 
-                /*
                 if (players[currentPlayer].GetComponent<Player>().GetGold() >= players[currentPlayer].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
                     win = true;
                     Console.WriteLine("player " + currentPlayer + " wins!");
                 }
-                */
+                
             }
         }
     }
@@ -69,17 +59,26 @@ public class Main : MonoBehaviour
     private void Move(int currentPlayer)
     {
         int moves = 5;
-        
-        //gives the elf an unfair advantage
         if (players[currentPlayer].GetComponent<Player>().GetClass() == 1)
         {
             moves++;
         }
+
+        int tempVal = 0;
         
-        //appears to give the poorest player a fair advantage
-        if (players[currentPlayer].GetComponent<Player>().GetGold()/players[currentPlayer].GetComponent<Player>().GetWinAmount() >= 0.25) //maybe ammend to just be player in last place
+        for (int i = 0; i > players.Count; i++)
+        {
+            tempVal += players[i].GetComponent<Player>().GetGold() / players[i].GetComponent<Player>().GetWinAmount();
+        }
+
+        tempVal = tempVal / players.Count;
+        
+        if (players[currentPlayer].GetComponent<Player>().GetGold() / players[currentPlayer].GetComponent<Player>().GetWinAmount() >= tempVal)
         {
             moves++;
+        } else if(players[currentPlayer].GetComponent<Player>().GetGold() / players[currentPlayer].GetComponent<Player>().GetWinAmount() <= tempVal*(players.Count-1))
+        {
+            moves--;
         }
         
         while (moves > 0)

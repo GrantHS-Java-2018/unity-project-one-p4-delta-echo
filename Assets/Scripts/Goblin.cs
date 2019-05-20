@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Goblin : Monster
 {
+    protected GameObject die;
+    
+    int[] dc = new int[6]; //all monster cards inherit from this
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +25,6 @@ public class Goblin : Monster
         
     }
 
-    public override bool Fight(int roll, int character)
-    {
-        return roll >= dc[character];
-    }
+
     
 }
