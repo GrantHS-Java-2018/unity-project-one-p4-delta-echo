@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     }
 
     // Start is called before the first frame update
-        void Start()
+    void Start()
     {
         die = Instantiate(diePrefab, this.transform);
         movement = Instantiate(movementPrefab, this.transform);
@@ -61,12 +61,13 @@ public class Player : MonoBehaviour
 
     public int GetClass()
     {
-        return(playerClass);
+        return playerClass;
     }
 
     public bool Move()
     {
         GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
+        
         if (newNode != null)
         {
             this.transform.position = newNode.transform.position;

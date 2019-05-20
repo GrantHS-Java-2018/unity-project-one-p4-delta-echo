@@ -53,13 +53,14 @@ public class Main : MonoBehaviour
             {
                 Move(currentPlayer);
                 
+                /*
                 if (players[currentPlayer].GetComponent<Player>().GetGold() >= players[currentPlayer].GetComponent<Player>().GetWinAmount())
                 {
                     //win stuff
                     win = true;
                     Console.WriteLine("player " + currentPlayer + " wins!");
                 }
-                
+                */
             }
         }
     }
