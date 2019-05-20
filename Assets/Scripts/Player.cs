@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private int gold = 0;
     private int winAmount;
     
-    private List<GameObject> treasures;
+    private List<GameObject> treasures = new List<GameObject>();
 
     private int WinAmount
     {
@@ -118,9 +118,11 @@ public class Player : MonoBehaviour
             {print("error"+total);
             }
 
-        }else
+        }
+        else
         {
-           treasures.Add(currentNode.GetComponent<Waypoint>().GetTreasure());
+           var treasure = currentNode.GetComponent<Waypoint>().GetTreasure();
+           treasures.Add(Instantiate(treasure, this.transform));
            monster = null;
         }
     }
