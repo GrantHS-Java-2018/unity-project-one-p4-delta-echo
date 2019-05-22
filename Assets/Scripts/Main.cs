@@ -12,10 +12,11 @@ public class Main : MonoBehaviour
     
     void Start()
     {
+        Debug.Log("Main initialized");
         AddPlayers();
         GameLoop();
     }
-
+    
     private void AddPlayers()
     {
         /* created an infinite loop, will fix later
@@ -36,10 +37,12 @@ public class Main : MonoBehaviour
         */
         
         //Currently we just need three players, this is temporary
+        Debug.Log("Instantiating players");
         for (int i = 0; i < 3; i++)
         {
             players.Add(Instantiate(playerPrefab, this.transform));
         }
+        Debug.Log("Players instantiated");
     }
     
 
@@ -47,11 +50,14 @@ public class Main : MonoBehaviour
     private void GameLoop()
     {
         bool win = false;
+        Debug.Log("Entered game loop");
         while (!win)
         {
             for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer ++)
             {
+                Debug.Log("Attempting to move");
                 Move(currentPlayer);
+                Debug.Log("Completed move");
                 
                 /*
                 if (players[currentPlayer].GetComponent<Player>().GetGold() >= players[currentPlayer].GetComponent<Player>().GetWinAmount())
@@ -78,20 +84,23 @@ public class Main : MonoBehaviour
         }
         
         //appears to give the poorest player a fair advantage
-        if (players[currentPlayer].GetComponent<Player>().GetGold()/players[currentPlayer].GetComponent<Player>().GetWinAmount() >= 0.25) //maybe ammend to just be player in last place
+        if (players[currentPlayer].GetComponent<Player>().GetGold()/players[currentPlayer].GetComponent<Player>().GetWinAmount() >= 0.25) //maybe amend to just be player in last place
         {
             moves++;
         }
         */
         
+        Debug.Log("Entering movement loop");
         while (moves > 0)
         {
+            Debug.Log("Calling Move() in Player");
             var moveSuccessful = players[currentPlayer].GetComponent<Player>().Move();
             
             if (moveSuccessful)
             {
                 moves--;
             }
+            Debug.Log("Move() successfully called in Player");
         }
     }
 }

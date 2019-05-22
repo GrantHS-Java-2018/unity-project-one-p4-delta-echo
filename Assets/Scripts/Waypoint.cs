@@ -14,6 +14,8 @@ public class Waypoint : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Waypoint initialized");
+        Debug.Log("Instantiating neighbors:");
         foreach (var neighbor in neighborPrefabs)
         {
             neighbors.Add(Instantiate(neighbor, this.transform));
@@ -21,6 +23,7 @@ public class Waypoint : MonoBehaviour
 
         monster = Instantiate(monsterPrefab, this.transform);
         treasure = Instantiate(treasurePrefab, this.transform);
+        Debug.Log("Neighbors instantiated");
     }
 
     public List<GameObject> GetNeighbors()

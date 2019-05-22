@@ -48,9 +48,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Player initialized");
+        Debug.Log("Instantiating player prefabs");
         die = Instantiate(diePrefab, this.transform);
         movement = Instantiate(movementPrefab, this.transform);
         currentNode = Instantiate(currentNodeAssignment, this.transform);
+        Debug.Log("Player prefabs instantiated");
     }
     
     public void SetClass(int tempClass)
@@ -66,17 +69,21 @@ public class Player : MonoBehaviour
 
     public bool Move()
     {
+        Debug.Log("Attempting to detect node, calling DetectNode() in Movement");
         GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
+        Debug.Log("Successfully detected node");
         
         if (newNode != null)
         {
+            Debug.Log("Moving to new node");
             this.transform.position = newNode.transform.position;
             currentNode = newNode;
             //OnEntry();
-
+            
+            Debug.Log("Move successful");
             return true;
         }
-
+        
         return false;
     }
 

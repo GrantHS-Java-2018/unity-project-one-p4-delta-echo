@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //When called by DetectNode, checks if mouse is down, fires ray, and returns the position of the node hit.
     /*
     public Vector3 CheckForClick()
@@ -47,12 +35,16 @@ public class Movement : MonoBehaviour
         
         //Vector3 clickedPosition = CheckForClick(); //saves whatever was clicked
         //Created null return to isolate CheckForClick
+        
+        Debug.Log("Created fake clicked position");
         Vector3 clickedPosition = new Vector3(0, 0, 0);
         
+        Debug.Log("Checking for clicked position in neighbors");
         foreach (var node in currentNode.GetComponent<Waypoint>().GetNeighbors())
         {
             if (clickedPosition == node.transform.position)
             {
+                Debug.Log("Node found");
                 return node;
             }
         }
@@ -64,6 +56,7 @@ public class Movement : MonoBehaviour
         }
         */
         
+        Debug.Log("No node found");
         return null;
     }
 }
