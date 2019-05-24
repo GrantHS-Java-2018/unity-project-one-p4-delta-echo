@@ -16,11 +16,11 @@ public class Waypoint : MonoBehaviour
     {
         foreach (var neighbor in neighborPrefabs)
         {
-            neighbors.Add(Instantiate(neighbor, this.transform));
+            neighbors.Add(Instantiate(neighbor, transform));
         }
 
-        monster = Instantiate(monsterPrefab, this.transform);
-        treasure = Instantiate(treasurePrefab, this.transform);
+        monster = Instantiate(monsterPrefab, transform);
+        treasure = Instantiate(treasurePrefab, transform);
     }
 
     public Waypoint Previous
