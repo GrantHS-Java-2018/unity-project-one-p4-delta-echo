@@ -33,7 +33,7 @@ public class Main : MonoBehaviour
 
             players.Add(Instantiate(playerPrefab, this.transform));
         }
-        */
+        
         
         //Currently we just need three players, this is temporary
         Debug.Log("Instantiating players");

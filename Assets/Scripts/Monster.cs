@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Monster : MonoBehaviour
 {
-    protected GameObject die;
+    protected new GameObject Die;
     
     int[] dc = new int[6]; //all monster cards inherit from this
     

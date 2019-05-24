@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goblin : Monster
 {
-    protected GameObject die;
+    protected GameObject Die;
     
     int[] dc = new int[6]; //all monster cards inherit from this
     
