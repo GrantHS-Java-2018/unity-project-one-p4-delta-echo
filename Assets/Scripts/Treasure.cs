@@ -5,13 +5,13 @@ using UnityEngine;
 public class Treasure : MonoBehaviour
 {
 
-   // public int value = 50;
+    public int value =50;
     
     // Start is called before the first frame update
-    // void Start()
-  //  {
+    void Start()
+    {
         
-   // }
+    }
 
     // Update is called once per frame
     void Update()

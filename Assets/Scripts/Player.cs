@@ -16,11 +16,9 @@ public class Player : MonoBehaviour
     private GameObject currentNode;
     
     private int playerClass; //changed by class
-    private int loseATurn;
-    private int gold = 0;
     private int winAmount;
-    
-    private List<GameObject> treasures = new List<GameObject>();
+    private int loseATurn;
+    private List<GameObject> treasures;
 
     private int WinAmount
     {
@@ -43,8 +41,10 @@ public class Player : MonoBehaviour
         {
             return winAmount;
         }                                
-    }
+    } //ditto
 
+    private int gold = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -55,16 +55,11 @@ public class Player : MonoBehaviour
         currentNode = Instantiate(currentNodeAssignment, this.transform);
         Debug.Log("Player prefabs instantiated");
     }
-    
+
     public void SetClass(int tempClass)
     {
         playerClass = tempClass;
         WinAmount = tempClass;
-    }
-
-    public int GetClass()
-    {
-        return playerClass;
     }
 
     public bool Move()
@@ -126,11 +121,9 @@ public class Player : MonoBehaviour
             {print("error"+total);
             }
 
-        }
-        else
+        }else
         {
-           var treasure = currentNode.GetComponent<Waypoint>().GetTreasure();
-           treasures.Add(Instantiate(treasure, this.transform));
+           treasures.Add(currentNode.GetComponent<Waypoint>().GetTreasure());
            monster = null;
         }
     }
@@ -144,6 +137,10 @@ public class Player : MonoBehaviour
     public int GetWinAmount()
     {
         return winAmount;
+    }
+    public int GetClass()
+    {
+        return playerClass;
     }
 
     /*

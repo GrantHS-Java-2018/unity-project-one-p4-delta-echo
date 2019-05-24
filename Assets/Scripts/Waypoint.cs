@@ -8,7 +8,7 @@ public class Waypoint : MonoBehaviour
     public GameObject monsterPrefab;
     public GameObject treasurePrefab;
     
-    private List<GameObject> neighbors = new List<GameObject>();
+    private List<GameObject> neighbors;
     private GameObject monster;
     private GameObject treasure;
 
@@ -18,21 +18,32 @@ public class Waypoint : MonoBehaviour
         Debug.Log("Instantiating neighbors:");
         foreach (var neighbor in neighborPrefabs)
         {
-            neighbors.Add(Instantiate(neighbor, this.transform));
+            neighbors.Add(Instantiate(neighbor, transform));
         }
 
-        monster = Instantiate(monsterPrefab, this.transform);
-        treasure = Instantiate(treasurePrefab, this.transform);
+        monster = Instantiate(monsterPrefab, transform);
+        treasure = Instantiate(treasurePrefab, transform);
         Debug.Log("Neighbors instantiated");
     }
 
-    public List<GameObject> GetNeighbors()
+    public Waypoint Previous
+    {
+        get;
+        set;
+    }
+
+    public float Distance
+    {
+        get;
+        set;
+    }
+
+    public List<GameObject> getNeighbors()
     {
         return neighbors;
     }
 
     //Draws lines on map, only in edit mode
-    /*
     private void OnDrawGizmos()
     {
         if (neighborPrefabs == null)
@@ -46,7 +57,6 @@ public class Waypoint : MonoBehaviour
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
     }
-    */
 
     public GameObject GetMonster()
     {
@@ -56,4 +66,5 @@ public class Waypoint : MonoBehaviour
     {
         return treasure;
     }
+
 }
