@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Goblin : Monster
 {
+    protected GameObject Die;
+    
+    int[] dc = new int[6]; //all monster cards inherit from this
+    
     // Start is called before the first frame update
     void Start()
     {

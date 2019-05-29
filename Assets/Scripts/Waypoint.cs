@@ -73,10 +73,7 @@ public class Waypoint : MonoBehaviour
         }
     }
 */
-    public GameObject GetMonster()
-    {
-        return monsters[0];
-    }
+
     public GameObject GetTreasure()
     {
         return treasure;
