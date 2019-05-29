@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public List<GameObject> neighborPrefabs;
-    public GameObject monsterPrefab;
+    public List<GameObject> neighborPrefabs = new List<GameObject>();
+    public List<GameObject> monsterPrefabs = new List<GameObject>();
     public GameObject treasurePrefab;
     
-    private List<GameObject> neighbors;
-    private GameObject monster;
+    private List<GameObject> neighbors = new List<GameObject>();
+    private List<GameObject> monsters = new List<GameObject>();
     private GameObject treasure;
 
     private void Start()
@@ -21,11 +21,26 @@ public class Waypoint : MonoBehaviour
             neighbors.Add(Instantiate(neighbor, transform));
         }
 
-        monster = Instantiate(monsterPrefab, transform);
-        treasure = Instantiate(treasurePrefab, transform);
+        RoomSet();
         Debug.Log("Neighbors instantiated");
     }
-    
+
+    private void RoomSet()
+    {
+        if (monsterPrefabs.Count == 1)
+        {
+            monsters.Add(Instantiate(monsterPrefabs[0], transform));
+            treasure = Instantiate(treasurePrefab, transform);
+        }
+        else if (monsterPrefabs.Count == 3)
+        {
+            foreach (var monster in monsterPrefabs)
+            {
+                monsters.Add(Instantiate(monster, transform));
+            }
+        }
+    }
+
     public Waypoint Previous
     {
         get;
