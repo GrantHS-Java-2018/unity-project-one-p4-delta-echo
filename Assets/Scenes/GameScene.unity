@@ -4526,7 +4526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighborPrefabs: []
-  monsterPrefab: {fileID: 0}
+  monsterPrefabs: []
   treasurePrefab: {fileID: 0}
 --- !u!1001 &1324201952
 PrefabInstance:
@@ -8598,6 +8598,6 @@ PrefabInstance:
         type: 3}
       propertyPath: currentNodeAssignment
       value: 
-      objectReference: {fileID: 549795157}
+      objectReference: {fileID: 549795158}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b70969f11fa59479cfe7ddd5506c6a, type: 3}
