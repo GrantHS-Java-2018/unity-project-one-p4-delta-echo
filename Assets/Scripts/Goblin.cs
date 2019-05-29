@@ -14,13 +14,4 @@ public class Goblin : Monster
         dc[4] = 2;
         dc[5] = 6;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    
 }
