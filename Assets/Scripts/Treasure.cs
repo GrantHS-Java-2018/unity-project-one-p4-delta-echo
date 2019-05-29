@@ -16,7 +16,7 @@ public class Treasure : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int a = 3;
+        //int a = 3;
     }
 
 }
