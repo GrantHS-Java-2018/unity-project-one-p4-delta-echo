@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private int playerClass; //changed by class
     private int winAmount;
     private int loseATurn;
-    private List<GameObject> treasures;
+    private List<GameObject> treasures = new List<GameObject>();
 
     private int WinAmount
     {
