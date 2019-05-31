@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-
     public GameObject playerPrefab;
     
     private List<GameObject> players = new List<GameObject>();
@@ -19,6 +18,7 @@ public class Main : MonoBehaviour
     
     private void AddPlayers()
     {
+        /*
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
@@ -33,8 +33,7 @@ public class Main : MonoBehaviour
 
             players.Add(Instantiate(playerPrefab, this.transform));
         }
-       
-        
+        */
         
         //Currently we just need three players, this is temporary
         Debug.Log("Instantiating players");
