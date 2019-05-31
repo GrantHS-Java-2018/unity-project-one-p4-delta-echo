@@ -18,7 +18,7 @@ public class Waypoint : MonoBehaviour
         Debug.Log("Instantiating neighbors:");
         foreach (var neighbor in neighborPrefabs)
         {
-            neighbors.Add(Instantiate(neighbor, transform));
+            neighbors.Add(/*Instantiate(*/neighbor/*, transform)*/);
         }
 
         RoomSet();
