@@ -27,40 +27,23 @@ public class Waypoint : MonoBehaviour
 
     private void RoomSet()
     {
-        Debug.Log("Instantiating monsters");
-        if (monsterPrefabs.Count == 1)
+        if (monsterPrefabs.Count == 0 || monsterPrefabs[0] == null)
         {
-            Debug.Log("1 monster slot");
-            if (monsterPrefabs[0] != null)
-            {
-                Debug.Log("Room, 1 monster");
-                monsters.Add(Instantiate(monsterPrefabs[0], transform));
-                treasure = Instantiate(treasurePrefab, transform);
-            }
-            else
-            {
-                Debug.Log("Empty room or chamber");
-            }
+            Debug.Log("Empty room, chamber, or hallway");
         }
-        else if (monsterPrefabs.Count == 3)
+        else 
         {
-            Debug.Log("3 monster slots");
+            Debug.Log("Room or chamber");
             foreach (var monster in monsterPrefabs)
             {
-                if (monster != null)
-                {
-                    Debug.Log("Chamber");
-                    monsters.Add(Instantiate(monster, transform));
-                }
-                else
-                {
-                    Debug.Log("Empty chamber");
-                }
+                monsters.Add(Instantiate(monster, transform));
             }
-        }
-        else
-        {
-            Debug.Log("Irregular monster slot #");
+
+            if (monsterPrefabs.Count == 1)
+            {
+                Debug.Log("It's a room, instantiating treasure");
+                treasure = Instantiate(treasurePrefab, this.transform);
+            }
         }
         Debug.Log("Instantiated monsters");
     }
