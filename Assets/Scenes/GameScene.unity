@@ -204,6 +204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 377229178}
@@ -237,6 +242,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 146835223}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 377229178}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &5845091 stripped
@@ -564,6 +574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 84050204}
@@ -587,6 +602,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 1526826209}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 84050204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &102143826 stripped
@@ -1665,6 +1685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 1372606013}
@@ -1683,6 +1708,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 1657033873}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1372606013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &409347182 stripped
@@ -2324,6 +2354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 2052631630}
@@ -2347,6 +2382,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 671980567}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2052631630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &625329044 stripped
@@ -4499,6 +4539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 1103869100}
@@ -4522,6 +4567,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 1748097555}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1103869100}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &1324201953 stripped
@@ -5977,6 +6027,16 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 1180866716}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1786540230}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1786540230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &1604849715 stripped
@@ -6087,6 +6147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: monster
       value: 
       objectReference: {fileID: 699080630}
@@ -6110,6 +6175,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 1212661624}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 699080630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &1608121353 stripped
@@ -6220,6 +6290,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: neighbors.Array.data[0]
       value: 
       objectReference: {fileID: 1450406116}
@@ -6243,6 +6318,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 2019116899}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2014896916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &1628940157 stripped
@@ -7266,6 +7346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
         type: 3}
+      propertyPath: monsterPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
       propertyPath: neighbors.Array.data[0]
       value: 
       objectReference: {fileID: 405656191}
@@ -7289,6 +7374,11 @@ PrefabInstance:
       propertyPath: treasurePrefab
       value: 
       objectReference: {fileID: 495599661}
+    - target: {fileID: 183471391429949090, guid: d13998345d5ecf344a31c5fbf7fe0875,
+        type: 3}
+      propertyPath: monsterPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1650581044}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13998345d5ecf344a31c5fbf7fe0875, type: 3}
 --- !u!4 &1931725327 stripped
