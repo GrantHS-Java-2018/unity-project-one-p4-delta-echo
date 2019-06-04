@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         Debug.Log("Instantiating player prefabs");
         die = Instantiate(diePrefab, this.transform);
         movement = Instantiate(movementPrefab, this.transform);
-        currentNode = Instantiate(currentNodeAssignment, this.transform);
+        currentNode = currentNodeAssignment;
         Debug.Log("Player prefabs instantiated");
     }
 
@@ -65,7 +65,11 @@ public class Player : MonoBehaviour
     public bool Move()
     {
         Debug.Log("Attempting to detect node, calling DetectNode() in Movement");
-        GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
+        GameObject newNode;
+        Debug.Log(movement);
+        var a = movement.GetComponent<Movement>();
+        var b = a.DetectNode(currentNode);
+        newNode = b;
         Debug.Log("Successfully detected node");
         
         if (newNode != null)

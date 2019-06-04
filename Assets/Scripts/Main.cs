@@ -12,7 +12,7 @@ public class Main : MonoBehaviour
     void Start()
     {
         Debug.Log("Main initialized");
-        AddPlayers();
+        //AddPlayers();
         Debug.Log("Entering game loop");
         GameLoop();
     }
