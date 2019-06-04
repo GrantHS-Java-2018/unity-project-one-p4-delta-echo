@@ -12,7 +12,6 @@ public class Dropdown : MonoBehaviour
     void Start()
     {
         dropdown = GetComponent<Dropdown>();
-        dropdown.
     }
 
     // Update is called once per frame
