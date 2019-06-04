@@ -37,13 +37,13 @@ public class Main : MonoBehaviour
         */
         
         //Currently we just need three players, this is temporary
-        Debug.Log("Instantiating players");
+        /*Debug.Log("Instantiating players");
         for (int i = 0; i < 3; i++)
         {
             players.Add(Instantiate(playerPrefab, this.transform));
         }
         Debug.Log("Players instantiated");
-    }
+    }*/
 
     //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
