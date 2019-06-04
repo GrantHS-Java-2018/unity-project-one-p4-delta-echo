@@ -17,9 +17,9 @@ public class Main : MonoBehaviour
         GameLoop();
     }
     
-    private void AddPlayers()
+    /*private void AddPlayers()
     {
-        /*
+        
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
