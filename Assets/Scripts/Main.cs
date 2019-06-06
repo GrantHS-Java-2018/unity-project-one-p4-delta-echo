@@ -12,15 +12,16 @@ public class Main : MonoBehaviour
     void Start()
     {
         Debug.Log("Main initialized");
-        //AddPlayers();
+        AddPlayers();
         Debug.Log("Entering game loop");
         GameLoop();
     }
     
-    /*private void AddPlayers()
+    private void AddPlayers()
     {
         
-        for (int i = 0; i < 8; i ++)
+        /*
+         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
             Console.WriteLine("1: Elf: Not very strong, good at finding secret doors, needs 10000 gp to win");
@@ -37,13 +38,13 @@ public class Main : MonoBehaviour
         */
         
         //Currently we just need three players, this is temporary
-        /*Debug.Log("Instantiating players");
+        Debug.Log("Instantiating players");
         for (int i = 0; i < 3; i++)
         {
             players.Add(Instantiate(playerPrefab, this.transform));
         }
         Debug.Log("Players instantiated");
-    }*/
+    }
 
     //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()

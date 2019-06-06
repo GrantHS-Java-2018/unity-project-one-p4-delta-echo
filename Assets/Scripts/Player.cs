@@ -65,11 +65,8 @@ public class Player : MonoBehaviour
     public bool Move()
     {
         Debug.Log("Attempting to detect node, calling DetectNode() in Movement");
-        GameObject newNode;
         Debug.Log(movement);
-        var a = movement.GetComponent<Movement>();
-        var b = a.DetectNode(currentNode);
-        newNode = b;
+        GameObject newNode = movement.GetComponent<Movement>().DetectNode(currentNode);
         Debug.Log("Successfully detected node");
         
         if (newNode != null)
