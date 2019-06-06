@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public GameObject playerPrefab;
     
-    private List<GameObject> players = new List<GameObject>();
+    public List<GameObject> players = new List<GameObject>();
     
     void Start()
     {
@@ -17,9 +17,10 @@ public class Main : MonoBehaviour
         GameLoop();
     }
     
-    /*private void AddPlayers()
+    private void AddPlayers()
     {
         
+        /*
         for (int i = 0; i < 8; i ++)
         {
             Console.WriteLine("Choose a class: ");
@@ -37,13 +38,15 @@ public class Main : MonoBehaviour
         */
         
         //Currently we just need three players, this is temporary
-        /*Debug.Log("Instantiating players");
+        /*
+        Debug.Log("Instantiating players");
         for (int i = 0; i < 3; i++)
         {
             players.Add(Instantiate(playerPrefab, this.transform));
         }
         Debug.Log("Players instantiated");
-    }*/
+        */
+    }
 
     //While no one has won, loop through players, moves current, then checks if anyone's won, in which case loop breaks.
     private void GameLoop()
@@ -52,7 +55,7 @@ public class Main : MonoBehaviour
         Debug.Log("Entered game loop");
         while (!win)
         {
-            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer++)
+            for (int currentPlayer = 0; currentPlayer < 3 /*player count*/; currentPlayer ++)
             {
                 Debug.Log("Attempting to move");
                 Move(currentPlayer);
