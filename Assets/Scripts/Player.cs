@@ -7,13 +7,9 @@ using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
-    public GameObject diePrefab;
-    public GameObject movementPrefab;
-    public GameObject currentNodeAssignment;
-    
-    private GameObject die;
-    private GameObject movement;
-    private GameObject currentNode;
+    public GameObject die;
+    public GameObject movement;
+    public GameObject currentNode;
     
     private int playerClass; //changed by class
     private int winAmount;
@@ -50,9 +46,6 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Player initialized");
         Debug.Log("Instantiating player prefabs");
-        die = Instantiate(diePrefab, this.transform);
-        movement = Instantiate(movementPrefab, this.transform);
-        currentNode = currentNodeAssignment;
         Debug.Log("Player prefabs instantiated");
     }
 
