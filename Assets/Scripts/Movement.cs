@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     //When called by DetectNode, checks if mouse is down, fires ray, and returns the position of the node hit.
-    /*
     public Vector3 CheckForClick()
     {
         if (Input.GetMouseButtonDown(0))
@@ -21,8 +20,7 @@ public class Movement : MonoBehaviour
 
         return new Vector3(0, 0, 0);
     }
-    */
-
+    
     //Shows the waypoints, then checks for click. Compares clicked position with positions of adjacent nodes, returns clicked node if there's a match. Hides adjacent nodes.
     public GameObject DetectNode(GameObject currentNode)
     {
@@ -34,7 +32,6 @@ public class Movement : MonoBehaviour
         */
         
         //Vector3 clickedPosition = CheckForClick(); //saves whatever was clicked
-        //Created null return to isolate CheckForClick
         
         Debug.Log("Created fake clicked position");
         Vector3 clickedPosition = new Vector3(0, 0, 0);

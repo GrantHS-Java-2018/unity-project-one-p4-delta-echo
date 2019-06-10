@@ -48,18 +48,6 @@ public class Waypoint : MonoBehaviour
         Debug.Log("Instantiated monsters");
     }
 
-    public Waypoint Previous
-    {
-        get;
-        set;
-    }
-
-    public float Distance
-    {
-        get;
-        set;
-    }
-
     public List<GameObject> GetNeighbors()
     {
         return neighbors;
@@ -79,7 +67,7 @@ public class Waypoint : MonoBehaviour
             Gizmos.DrawLine(transform.position, neighbor.transform.position);
         }
     }
-*/
+    */
 
     public GameObject GetTreasure()
     {
