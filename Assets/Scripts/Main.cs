@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public GameObject playerPrefab;
     
-    private List<GameObject> players = new List<GameObject>();
+    public List<GameObject> players = new List<GameObject>();
     
     void Start()
     {
@@ -53,7 +53,7 @@ public class Main : MonoBehaviour
         Debug.Log("Entered game loop");
         while (!win)
         {
-            for (int currentPlayer = 0; currentPlayer < 4 /*player count*/; currentPlayer++)
+            for (int currentPlayer = 0; currentPlayer < 3 /*player count*/; currentPlayer ++)
             {
                 Debug.Log("Attempting to move");
                 Move(currentPlayer);
